@@ -1,0 +1,7 @@
+{
+  "name": "book-pals-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
