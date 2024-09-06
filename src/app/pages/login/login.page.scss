@@ -1,0 +1,17 @@
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+ion-button[color="warning"] {
+    text-transform: initial;
+}
+
+.container {
+    background: black;
+}
+ion-card {
+    background: black;
+}
