@@ -8,7 +8,9 @@
 
 <ion-content >
   <ng-container *ngIf="isLoading">
-    <div loading></div>
+    <div class="flex-center">
+      <ion-spinner name="circles" ></ion-spinner>
+    </div>
   </ng-container>
   
   <ng-container *ngIf="!isLoading" class=" ">
@@ -21,63 +23,127 @@
       ></ion-refresher-content>
     </ion-refresher>
 
+    <!-- Cards -->
     <main class="main">
       <div class="container">
         <div class="middle">
-          <!-- CARD TESTING -->
+
           <ion-card>
-            <ion-card-header>
-              <ion-card-title>Card Title</ion-card-title>
-              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-            </ion-card-header>
-          
+            <ion-grid>
+              <ion-row >
+                <ion-col size="auto">
+                  <img class="profile-pic" src="https://64.media.tumblr.com/7b28774544438d73ca8c1daad11402e0/88958e5f55a67155-fd/s250x400/a9ef3dad54f6c57a53fdeef1a793f0143a9aea27.jpg" alt="Profile Picture">
+                </ion-col>
+                <ion-col>
+                  <div class="text-wrapper">
+                    <h2>Jenny Han</h2>
+                    <h5>South Korea, 15 MINUTES AGO</h5>
+                  </div> 
+                </ion-col>
+              </ion-row>
+            </ion-grid>
             <ion-card-content>
-              Here's a small text description for the card content. Nothing more, nothing less.
+              <div class="">
+                  <img class="photo" src="https://www.zdnet.com/a/img/resize/c0082249cc84a984abd498df08f1396e6eb5d77a/2022/10/17/54f8180a-271d-4bd6-8e37-a45d96b46e16/pxl-20221017-155135708.jpg?auto=webp&fit=crop&height=900&width=1200" alt="" />
+              </div>
+              <div class="action-button">
+                <ion-grid [fixed]="true">
+                  <ion-row>
+                    <ion-col class="icons-center"><ion-icon name="heart-outline"></ion-icon></ion-col>
+                    <ion-col class="icons-center"><ion-icon name="chatbubble-outline"></ion-icon></ion-col>
+                    <ion-col class="icons-center"><ion-icon name="bookmark-outline"></ion-icon></ion-col>
+                    <ion-col class="icons-center"><ion-icon name="arrow-redo-outline"></ion-icon></ion-col>
+                  </ion-row>
+                </ion-grid>
+              </div>
+              <div>
+                  <p>Liked by <b>220 others</b></p>
+              </div>
+
             </ion-card-content>
           </ion-card>
-          <!--  -->
-                <div class="feeds">
 
-                  <div class="feed">
-                    <div class="head"></div>
-                      <div class="user">
-                          <div class="profile-pic">
-                              <img src="https://64.media.tumblr.com/7b28774544438d73ca8c1daad11402e0/88958e5f55a67155-fd/s250x400/a9ef3dad54f6c57a53fdeef1a793f0143a9aea27.jpg" alt="" />
-                          </div>
-                          <div class="info">
-                              <h3>Lana Rose</h3>
-                              <small>Dubai, 15 MINUTES AGO</small>
-                          </div>
-                          <span class="edit"><i class="uil uil-ellipsis-h"></i></span>
-                      </div>
+          <ion-card>
+            <ion-grid>
+              <ion-row >
+                <ion-col size="auto">
+                  <img class="profile-pic" src="https://media.licdn.com/dms/image/D4E03AQH-EGR5bpG-Mg/profile-displayphoto-shrink_400_400/0/1697741903092?e=2147483647&v=beta&t=RQkpJhzxzrqrsImmgNY_Zw9I2_6m-x3Qnvojeuvshas" alt="Profile Picture">
+                </ion-col>
+                <ion-col>
+                  <div class="text-wrapper">
+                    <h2>Cristian Salazar</h2>
+                    <h5>Mexico, 4 HOURS AGO</h5>
+                  </div> 
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            <ion-card-content>
+              <div class="">
+                <b>Just finished The Great Adventure here's my review.</b>
+                  <p>I thoroughly enjoyed 'The Great Adventure'. 
+                    The plot twists were thrilling, and the characters felt so real. 
+                    I especially loved the protagonist’s journey. However, 
+                    I felt that the pacing slowed down in the middle, which slightly 
+                    detracted from the overall experience. Overall, highly recommend!</p>
+              </div>
+              <div class="action-button">
+                <ion-grid [fixed]="true">
+                  <ion-row>
+                    <ion-col class="icons-center"><ion-icon name="heart-outline"></ion-icon></ion-col>
+                    <ion-col class="icons-center"><ion-icon name="chatbubble-outline"></ion-icon></ion-col>
+                    <ion-col class="icons-center"><ion-icon name="bookmark-outline"></ion-icon></ion-col>
+                    <ion-col class="icons-center"><ion-icon name="arrow-redo-outline"></ion-icon></ion-col>
+                  </ion-row>
+                </ion-grid>
+              </div>
+              <div>
+                  <p>Liked by <b>17 others</b></p>
+              </div>
 
-                      <div class="photo">
-                          <img src="https://png.pngtree.com/background/20230512/original/pngtree-nature-background-sunset-wallpaer-with-beautiful-flower-farms-picture-image_2503007.jpg" alt="" />
-                      </div>
+            </ion-card-content>
+          </ion-card>
 
-                      <div class="action-button">
-                          <div class="interaction-button">
-                              <span><i class="uil uil-thumbs-up"></i></span>
-                              <span><i class="uil uil-comment"></i></span>
-                          </div>
-                          <div class="bookmark">
-                              <span><i class="uil uil-bookmark"></i></span>
-                          </div>
-                      </div>
+          <ion-card>
+            <ion-grid>
+              <ion-row >
+                <ion-col size="auto">
+                  <img class="profile-pic" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp" alt="Profile Picture">
+                </ion-col>
+                <ion-col>
+                  <div class="text-wrapper">
+                    <h2>Marques Smith</h2>
+                    <h5>United States, 7 HOURS AGO</h5>
+                  </div> 
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            <ion-card-content>
+              <div class="">
+                  <b>My latest purchsate</b>
+                  <p>Thougth's on my new books? Which one should I read first?</p>
+                  <img class="photo" src="https://i.redd.it/vzvkckuyvwed1.png" alt="" />
+              </div>
+              <div class="action-button">
+                <ion-grid [fixed]="true">
+                  <ion-row>
+                    <ion-col class="icons-center"><ion-icon name="heart-outline"></ion-icon></ion-col>
+                    <ion-col class="icons-center"><ion-icon name="chatbubble-outline"></ion-icon></ion-col>
+                    <ion-col class="icons-center"><ion-icon name="bookmark-outline"></ion-icon></ion-col>
+                    <ion-col class="icons-center"><ion-icon name="arrow-redo-outline"></ion-icon></ion-col>
+                  </ion-row>
+                </ion-grid>
+              </div>
+              <div>
+                  <p>Liked by <b>380 others</b></p>
+              </div>
 
-                      <div class="liked-by">
-                          <p>Liked by <b>220 others</b></p>
-                      </div>
-                      <div class="comments text-muted">View all 130 comments</div>
-                  </div>
-          </div>
+            </ion-card-content>
+          </ion-card>
+
         </div>
-
-        <app-explore-container name="Tab 1 page"></app-explore-container>
       </div>
     </main>
-    
-    
+    <!-- End Cards -->
   </ng-container>
   
 </ion-content>

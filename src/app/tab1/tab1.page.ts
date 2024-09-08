@@ -19,7 +19,7 @@ export class Tab1Page {
 
     setTimeout(() => {
       event.target.complete();
-    }, 0);
+    }, 3000);
     console.log("Testing")
   }
 

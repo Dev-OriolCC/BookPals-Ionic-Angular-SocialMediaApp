@@ -19,68 +19,27 @@
     gap: 5px;
 }
 
-ion-card {
-    width: 100%;
-    max-width: 500px;
-    margin-top: 5px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 0;
-}
-
-.card-header {
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-    background: red;
-}
-
-/* */
-
-.profile-pic {
-    width: 50px;
-    /* Define the size of the image */
-    height: 50px;
-    border-radius: 50%;
-    /* Make the image circular */
-    margin-right: 5px;
-    /* Add space between the image and text */
-    object-fit: cover;
-    /* Ensure the image scales properly */
-}
-
-.text-wrapper {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-}
-
-.text-wrapper h2 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: bold;
-    /* Adjust font size */
-    color: black;
-}
-
-.text-wrapper h5 {
-    margin: 0;
-    font-size: 14px;
-    color: black;
-}
-
-.photo {
-    border-radius: 4%;
+ion-item {
+    --padding-start: 8px;
 }
 
 ion-icon {
-    font-size: 25px;
-    color: black;
+    font-size: 12px;
+    align-self: start;
+    margin: 15px 8px;
 }
-.icons-center {
+
+.profile-pic {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 5px;
+    object-fit: cover;
+}
+
+.wrapper {
     display: flex;
-    justify-content: center;
-}
-p, b {
-    color: black;
-    margin: 0;
+    flex-direction: column;
+    //background: red;
+    margin-top: 0;
 }
