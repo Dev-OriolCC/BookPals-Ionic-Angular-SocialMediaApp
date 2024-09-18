@@ -1,13 +1,11 @@
 package com.bookpals.bookpals.domain.users;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.bookpals.bookpals.domain.books.Book;
 import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -27,5 +25,6 @@ public class User {
     //    private String genre;
     private String imageUrl;
     private LocalDateTime createdAt;
+    private Set<Book> books;
 
 }

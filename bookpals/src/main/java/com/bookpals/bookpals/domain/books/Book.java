@@ -15,7 +15,7 @@ public class Book {
     private String author;
     //private String genre;
     private String imageUrl;
-    private String pages;
+    private Long pages;
     private String isbn;
 
 }

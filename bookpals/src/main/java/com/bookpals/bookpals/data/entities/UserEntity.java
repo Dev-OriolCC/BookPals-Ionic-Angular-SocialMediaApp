@@ -63,7 +63,7 @@ public class UserEntity {
      * User -* Book
      */
     //@ElementCollection(fetch = FetchType.EAGER)
-    @OneToMany(mappedBy = "users")
+    @OneToMany(mappedBy = "users", fetch = FetchType.EAGER)
     private Set<UserBookEntity> userBookEntities = new HashSet<>();
 
     public void addBookEntity(UserBookEntity userBookEntity) {

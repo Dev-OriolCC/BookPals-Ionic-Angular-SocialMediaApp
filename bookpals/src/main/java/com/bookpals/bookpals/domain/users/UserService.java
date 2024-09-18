@@ -2,6 +2,8 @@ package com.bookpals.bookpals.domain.users;
 
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserService {
     private final UserGateway userGateway;
@@ -17,4 +19,6 @@ public class UserService {
     public User update(User user) {
         return userGateway.update(user);
     }
+    public List<User> getAll() { return userGateway.getAll(); }
+    public User getUserById(Long id) { return userGateway.getUserById(id); }
 }
