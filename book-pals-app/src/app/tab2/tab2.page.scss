@@ -6,7 +6,7 @@
 }
 
 .container {
-    width: 95%;
+    width: 100%;
     /* Make sure it takes full width */
     max-width: 600px;
     /* Limit the container's width */
@@ -40,6 +40,29 @@ ion-icon {
 .wrapper {
     display: flex;
     flex-direction: column;
-    //background: red;
-    margin-top: 0;
+    background: white;
+    margin: 0;
+    align-items: center;
+}
+
+.addBook {
+    --background: #2d2f2e;
+
+    --color: rgb(253, 253, 253);
+
+    --border-radius: 0;
+    --border-width: 1px;
+
+    --ripple-color: rgb(193, 194, 185);
+}
+
+
+.img-book-list { 
+    width: 80px;
+    height: 120px;
+}
+.text-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
 }

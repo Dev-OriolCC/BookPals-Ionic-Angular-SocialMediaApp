@@ -1,0 +1,29 @@
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 5px;
+    object-fit: cover;
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.text-wrapper h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.text-wrapper h5 {
+    margin: 0;
+    font-size: 14px;
+}
+
+h5 {
+    margin: 0;
+    font-size: 16px;
+}

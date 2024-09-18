@@ -1,0 +1,109 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 2
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content pullingIcon="chevron-down-circle-outline" pullingText="Pull to refresh"
+      refreshingSpinner="circles"></ion-refresher-content>
+  </ion-refresher> -->
+  <ng-container>
+    <div class="container">
+      <div class="middle">
+        <h3>Book Stats</h3>
+      </div>
+      <ion-card>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6">
+              <div class="wrapper">
+                <h5>Books</h5>
+                <h6>4</h6>
+              </div>
+
+            </ion-col>
+            <ion-col size="6">
+              <div class="wrapper">
+                <h5>Pages</h5>
+                <h6>420</h6>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="3"><img
+                src="http://books.google.com/books/content?id=_ojXNuzgHRcC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE70DztS2Kp0YV4Tjue2hFC1aaaOVYQEJ273ake5cN0W0yNt4AdnwUnSsu5Y7uq-QuqMrFXtUK4x-oUZUw-K1s3P2hCqPP0KB6vfd2mSa0FB_8H6Y1QxTVm_dEFnGmuv7dwx0OTHI&source=gbs_api"
+                alt="" srcset=""></ion-col>
+            <ion-col size="3"><img
+                src="http://books.google.com/books/content?id=_ojXNuzgHRcC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE70DztS2Kp0YV4Tjue2hFC1aaaOVYQEJ273ake5cN0W0yNt4AdnwUnSsu5Y7uq-QuqMrFXtUK4x-oUZUw-K1s3P2hCqPP0KB6vfd2mSa0FB_8H6Y1QxTVm_dEFnGmuv7dwx0OTHI&source=gbs_api"
+                alt="" srcset=""></ion-col>
+            <ion-col size="3"><img
+                src="http://books.google.com/books/content?id=_ojXNuzgHRcC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE70DztS2Kp0YV4Tjue2hFC1aaaOVYQEJ273ake5cN0W0yNt4AdnwUnSsu5Y7uq-QuqMrFXtUK4x-oUZUw-K1s3P2hCqPP0KB6vfd2mSa0FB_8H6Y1QxTVm_dEFnGmuv7dwx0OTHI&source=gbs_api"
+                alt="" srcset=""></ion-col>
+            <ion-col size="3"><img
+                src="http://books.google.com/books/content?id=_ojXNuzgHRcC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE70DztS2Kp0YV4Tjue2hFC1aaaOVYQEJ273ake5cN0W0yNt4AdnwUnSsu5Y7uq-QuqMrFXtUK4x-oUZUw-K1s3P2hCqPP0KB6vfd2mSa0FB_8H6Y1QxTVm_dEFnGmuv7dwx0OTHI&source=gbs_api"
+                alt="" srcset=""></ion-col>
+
+          </ion-row>
+          <ion-row>
+            <ion-col size="12"><ion-button class="addBook" id="open-modal" expand="block">Add Book</ion-button></ion-col>
+
+            <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <ion-buttons slot="start">
+                      <ion-button (click)="cancel()">Cancel</ion-button>
+                    </ion-buttons>
+                    <ion-buttons slot="end">
+                      <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+                    </ion-buttons>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <div class="add-content">
+
+                      <ion-searchbar [debounce]="1000" (ionInput)="handleInput($event)"></ion-searchbar>
+                    
+                      <ion-list size="">
+                        <ion-item *ngFor="let result of results">
+                          <ion-label>
+                            <ion-grid>
+                              <ion-row>
+                                <ion-col size="3">
+                                  <img class="img-book-list" src="http://books.google.com/books/content?id=_ojXNuzgHRcC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE73X7V5iCB55aJsrpUw_n--MYBp4rTeETeVt2-zRg5EMyfYExdHQWmCdgRnbP1NpyO1Ci5BzJ25CEu5pkKgHmClm_7kVCEk5GlIZNdHOd0pukZKojKRNqEiFnqrsQwvgcVHuIXbz&source=gbs_api" alt="" >
+                                </ion-col>
+                                <ion-col size="9">
+                                  <div class="text-list-wrapper">
+                                    <span>{{ result }} </span>
+                                    <h6>By Jenny Han</h6>
+                                    <h6>Fingerprint! Publishing</h6>
+                                    <h6>December 25, 2023</h6>
+                                  </div>
+                                </ion-col>
+                              </ion-row>
+                            </ion-grid>
+                            
+                          </ion-label>
+                        </ion-item>
+                      </ion-list>                    
+
+                    </div>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+
+            <ion-col>
+              <p>More Stats</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </div>
+  </ng-container>
+
+
+</ion-content>
