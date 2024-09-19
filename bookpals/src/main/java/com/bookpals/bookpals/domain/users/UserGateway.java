@@ -8,5 +8,7 @@ public interface UserGateway {
     User update(User user);
     List<User> getAll();
     User getUserById(Long id);
+    void requestResetPassword(String email);
+    User verifyResetPassword(String url);
 
 }

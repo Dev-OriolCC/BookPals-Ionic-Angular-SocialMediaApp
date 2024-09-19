@@ -33,6 +33,17 @@ public class UserController {
 
     }
 
+    @PostMapping("/resetpassword/request/{email}")
+    public ResponseEntity<Void> requestResetPassword(@PathVariable String email) {
+        userService.requestResetPassword(email);
+        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/resetpassword/verify/url")
+    public ResponseEntity<UserDTO> verifyResetPassword(@RequestParam String url){
+        return ResponseEntity.ok(toDto(userService.verifyResetPassword(url)));
+    }
+
     @Getter
     @Setter
     @AllArgsConstructor

@@ -1,5 +1,6 @@
 package com.bookpals.bookpals.domain.resetpassword;
 
+import com.bookpals.bookpals.data.entities.UserEntity;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -14,8 +15,8 @@ public class ResetPasswordVerificationService {
         return resetPasswordVerificationGateway.create(resetPasswordVerification);
     }
 
-    public ResetPasswordVerification update(ResetPasswordVerification resetPasswordVerification) {
-        return resetPasswordVerificationGateway.update(resetPasswordVerification);
+    public void create(UserEntity user, String expirationDate, String url) {
+        resetPasswordVerificationGateway.create(user, expirationDate, url);
     }
 
 
