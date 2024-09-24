@@ -1,6 +1,7 @@
 package com.bookpals.bookpals.domain.users;
 
 import com.bookpals.bookpals.domain.books.Book;
+import com.bookpals.bookpals.domain.genres.Genre;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -22,9 +23,8 @@ public class User {
     private String bio;
     private String country;
     private Date birthday;
-    //    private String genre;
     private String imageUrl;
     private LocalDateTime createdAt;
     private Set<Book> books;
-
+    private Set<Genre> genres;
 }

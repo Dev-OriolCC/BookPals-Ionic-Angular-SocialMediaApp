@@ -6,16 +6,10 @@ import com.bookpals.bookpals.data.repositories.ResetPasswordVerificationReposito
 import com.bookpals.bookpals.domain.resetpassword.ResetPasswordVerification;
 import com.bookpals.bookpals.domain.resetpassword.ResetPasswordVerificationGateway;
 import lombok.RequiredArgsConstructor;
-import org.apache.commons.lang3.time.DateFormatUtils;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.Locale;
-
-import static org.apache.commons.lang3.time.DateUtils.addDays;
 
 @Component
 @RequiredArgsConstructor

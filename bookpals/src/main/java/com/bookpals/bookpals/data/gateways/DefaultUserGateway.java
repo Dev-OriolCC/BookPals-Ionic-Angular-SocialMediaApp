@@ -3,9 +3,11 @@ package com.bookpals.bookpals.data.gateways;
 import com.bookpals.bookpals.data.entities.ResetPasswordVerificationEntity;
 import com.bookpals.bookpals.data.entities.UserBookEntity;
 import com.bookpals.bookpals.data.entities.UserEntity;
+import com.bookpals.bookpals.data.entities.UserGenreEntity;
 import com.bookpals.bookpals.data.repositories.ResetPasswordVerificationRepository;
 import com.bookpals.bookpals.data.repositories.UserRepository;
 import com.bookpals.bookpals.domain.books.Book;
+import com.bookpals.bookpals.domain.genres.Genre;
 import com.bookpals.bookpals.domain.resetpassword.ResetPasswordVerificationGateway;
 import com.bookpals.bookpals.domain.users.User;
 import com.bookpals.bookpals.domain.users.UserGateway;
@@ -30,6 +32,7 @@ public class DefaultUserGateway implements UserGateway {
     private final UserRepository userRepository;
     private final ResetPasswordVerificationRepository resetPasswordVerificationRepository;
     private final DefaultBookGateway defaultBookGateway;
+    private final DefaultGenreGateway defaultGenreGateway;
     private final DefaultResetPasswordVerificationGateway resetPasswordVerificationGateway;
 
 
@@ -108,6 +111,10 @@ public class DefaultUserGateway implements UserGateway {
                 .map(UserBookEntity::getBooks)
                 .map(defaultBookGateway::toModel)
                 .collect(Collectors.toSet());
+        Set<Genre> genres = userEntity.getUserGenreEntities().stream()
+                .map(UserGenreEntity::getGenres)
+                .map(defaultGenreGateway::toModel)
+                .collect(Collectors.toSet());
 
         return User.builder()
                 .id(userEntity.getId())
@@ -120,6 +127,7 @@ public class DefaultUserGateway implements UserGateway {
                 .imageUrl(userEntity.getImageUrl())
                 .createdAt(userEntity.getCreatedAt())
                 .books(books)
+                .genres(genres)
                 .build();
     }
 }

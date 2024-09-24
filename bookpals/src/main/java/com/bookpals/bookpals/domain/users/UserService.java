@@ -22,6 +22,5 @@ public class UserService {
     public List<User> getAll() { return userGateway.getAll(); }
     public User getUserById(Long id) { return userGateway.getUserById(id); }
     public void requestResetPassword(String email) { userGateway.requestResetPassword(email); }
-    public User verifyResetPassword(String url) { return userGateway.verifyResetPassword(url);
-    }
+    public User verifyResetPassword(String url) { return userGateway.verifyResetPassword(url); }
 }

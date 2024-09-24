@@ -62,7 +62,6 @@ public class UserEntity {
      * @OneToMany_Relationship
      * User -* Book
      */
-    //@ElementCollection(fetch = FetchType.EAGER)
     @OneToMany(mappedBy = "users", fetch = FetchType.EAGER)
     private Set<UserBookEntity> userBookEntities = new HashSet<>();
 
@@ -79,5 +78,15 @@ public class UserEntity {
         this.userBookEntities.add(userBookEntity);
     }
 
+    /**
+     * @OneToMany_Relationship
+     * User -* Genre
+     */
+    @OneToMany(mappedBy = "users", fetch = FetchType.EAGER)
+    private Set<UserGenreEntity> userGenreEntities = new HashSet<>();
 
+    public void addGenreEntity(UserGenreEntity userGenreEntity) { this.userGenreEntities.add(userGenreEntity); }
+    public Set<UserGenreEntity> getUserGenreEntity() { return userGenreEntities; }
+    public void setUserGenres(Set<UserGenreEntity> userGenreEntities) {this.userGenreEntities = userGenreEntities; }
+    public void addUserGenreEntity(UserGenreEntity userGenreEntity) { this.userGenreEntities.add(userGenreEntity); }
 }

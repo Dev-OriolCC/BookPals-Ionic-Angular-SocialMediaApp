@@ -1,0 +1,12 @@
+insert into genres (id, name) values (1, 'Documentary');
+insert into genres (id, name) values (2, 'Documentary|Drama');
+insert into genres (id, name) values (3, 'Documentary');
+insert into genres (id, name) values (4, 'Drama|Horror|Thriller');
+insert into genres (id, name) values (5, 'Comedy|Crime|Romance');
+insert into genres (id, name) values (6, 'Horror');
+insert into genres (id, name) values (7, 'Drama|War');
+insert into genres (id, name) values (8, 'Comedy');
+insert into genres (id, name) values (9, 'Comedy|Drama');
+insert into genres (id, name) values (10, 'Drama');
+insert into genres (id, name) values (11, 'Comedy|Romance');
+insert into genres (id, name) values (12, 'Drama');

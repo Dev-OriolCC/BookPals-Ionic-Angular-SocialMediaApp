@@ -1,0 +1,10 @@
+insert into resetpasswordverifications (id, user_id, url, expiration_date) values (1, 1, 'http://dummyimage.com/143x100.png/cc0000/ffffff', '3/10/2024');
+insert into resetpasswordverifications (id, user_id, url, expiration_date) values (2, 2, 'http://dummyimage.com/101x100.png/ff4444/ffffff', '8/7/2024');
+insert into resetpasswordverifications (id, user_id, url, expiration_date) values (3, 3, 'http://dummyimage.com/176x100.png/ff4444/ffffff', '6/16/2024');
+insert into resetpasswordverifications (id, user_id, url, expiration_date) values (4, 4, 'http://dummyimage.com/107x100.png/dddddd/000000', '8/2/2024');
+insert into resetpasswordverifications (id, user_id, url, expiration_date) values (5, 5, 'http://dummyimage.com/113x100.png/5fa2dd/ffffff', '4/20/2024');
+insert into resetpasswordverifications (id, user_id, url, expiration_date) values (6, 6, 'http://dummyimage.com/148x100.png/ff4444/ffffff', '6/23/2024');
+insert into resetpasswordverifications (id, user_id, url, expiration_date) values (7, 7, 'http://dummyimage.com/163x100.png/ff4444/ffffff', '3/12/2024');
+insert into resetpasswordverifications (id, user_id, url, expiration_date) values (8, 8, 'http://dummyimage.com/210x100.png/dddddd/000000', '9/29/2023');
+insert into resetpasswordverifications (id, user_id, url, expiration_date) values (9, 9, 'http://dummyimage.com/170x100.png/dddddd/000000', '9/10/2024');
+insert into resetpasswordverifications (id, user_id, url, expiration_date) values (10, 10, 'http://dummyimage.com/187x100.png/dddddd/000000', '9/7/2024');

@@ -1,0 +1,10 @@
+insert into users_genres (genre_id, user_id) values (1, 1);
+insert into users_genres (genre_id, user_id) values (2, 2);
+insert into users_genres (genre_id, user_id) values (3, 1);
+insert into users_genres (genre_id, user_id) values (4, 3);
+insert into users_genres (genre_id, user_id) values (5, 4);
+insert into users_genres (genre_id, user_id) values (6, 4);
+insert into users_genres (genre_id, user_id) values (6, 5);
+insert into users_genres (genre_id, user_id) values (7, 6);
+insert into users_genres (genre_id, user_id) values (8, 7);
+insert into users_genres (genre_id, user_id) values (8, 8);

@@ -1,6 +1,7 @@
 package com.bookpals.bookpals.web;
 
 import com.bookpals.bookpals.domain.books.Book;
+import com.bookpals.bookpals.domain.genres.Genre;
 import com.bookpals.bookpals.domain.users.User;
 import com.bookpals.bookpals.domain.users.UserService;
 import lombok.*;
@@ -19,8 +20,6 @@ import java.util.stream.Collectors;
 public class UserController {
 
     private final UserService userService;
-
-
     @GetMapping
     public ResponseEntity<List<UserDTO>> getAll() {
         List<UserDTO> userDTOList = userService.getAll().stream().map(this::toDto).toList();
@@ -60,6 +59,7 @@ public class UserController {
         private LocalDateTime createdAt;
         //
         private Set<Book> books;
+        private Set<Genre> genres;
     }
     private UserDTO toDto(User user) {
         return UserDTO.builder()
@@ -72,6 +72,7 @@ public class UserController {
                 .imageUrl(user.getImageUrl())
                 .createdAt(user.getCreatedAt())
                 .books(user.getBooks())
+                .genres(user.getGenres())
                 .build();
     }
 
