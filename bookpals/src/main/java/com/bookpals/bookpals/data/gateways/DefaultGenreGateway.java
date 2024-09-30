@@ -4,7 +4,6 @@ import com.bookpals.bookpals.data.entities.GenreEntity;
 import com.bookpals.bookpals.data.repositories.GenreRepository;
 import com.bookpals.bookpals.domain.genres.Genre;
 import com.bookpals.bookpals.domain.genres.GenreGateway;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

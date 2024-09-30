@@ -26,9 +26,6 @@ public class BookController {
         return ResponseEntity.ok(bookDTOList);
     }
 
-//    @GetMapping("/:userId")
-//    public ResponseEntity<Set<BookDTO>> get
-
     @Getter
     @Setter
     @AllArgsConstructor

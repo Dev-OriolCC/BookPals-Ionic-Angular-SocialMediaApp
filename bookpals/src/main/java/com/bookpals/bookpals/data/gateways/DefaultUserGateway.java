@@ -8,7 +8,6 @@ import com.bookpals.bookpals.data.repositories.ResetPasswordVerificationReposito
 import com.bookpals.bookpals.data.repositories.UserRepository;
 import com.bookpals.bookpals.domain.books.Book;
 import com.bookpals.bookpals.domain.genres.Genre;
-import com.bookpals.bookpals.domain.resetpassword.ResetPasswordVerificationGateway;
 import com.bookpals.bookpals.domain.users.User;
 import com.bookpals.bookpals.domain.users.UserGateway;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +16,6 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;

@@ -12,7 +12,6 @@ import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/book-pals/api/v1/user")
 @CrossOrigin
