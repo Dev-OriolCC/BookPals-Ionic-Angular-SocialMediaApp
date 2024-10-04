@@ -1,47 +1,65 @@
-<ion-content [fullscreen]="true">
-  <ng-container>
+<ion-content [fullscreen]="true" *ngIf="(userState$ | async) as state" [ngSwitch]="state.dataState">
+  <ng-container *ngSwitchCase="DataState.LOADING" >
+    <div class="flex-center">
+      <ion-spinner name="circles" ></ion-spinner>
+    </div>
+  </ng-container>
+  <ng-container *ngSwitchCase="DataState.ERROR">
+    ERROR
+    Retry Button
+  </ng-container>
+
+  <ng-container *ngSwitchCase="DataState.LOADED" >
     <div class="container">
+      <p>{{ state?.appData?.data?.user }}</p>
       <!-- Backgound -->
       <ion-card>
         <ion-grid>
           <ion-row>
             <ion-col size="auto">
-              <img src="https://play-lh.googleusercontent.com/t2tJJ3PvHpZwSVH20B7zGBqcqMrUMnNpQ8re_BiS6vqdxboDm_RM_pcJvuRY-n8KvGA=w526-h296-rw" 
+              <img src="{{ state?.appData?.data?.user?.imageUrl }}" 
               class="profile-pic" alt="">
             </ion-col>
             <ion-col>
               <div class="text-wrapper">
-                <h2>Jessica Lawrence</h2>
-                <h5>♀️ 🇰🇷 23</h5>
+                <h2>{{ state?.appData?.data?.user?.name }}</h2>
+                <h5>{{ state?.appData?.data?.user?.country }} {{ state?.appData?.data?.user?.birthday | date:'MMMM d, yyyy' }}</h5>
               </div>
             </ion-col>
           </ion-row>
           <ion-row>
             <ion-col size="12">
               <h5>Bio</h5>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque dolores ratione maiores rerum beatae enim, itaque expedita. Excepturi similique suscipit corporis? Totam temporibus ipsum unde saepe quis nam enim sint.
-              Consectetur nesciunt odit non ducimus laborum enim maiores perferendis, eveniet autem error optio incidunt, possimus facilis temporibus vitae iste ea provident omnis saepe veniam nostrum veritatis molestias! 
-              Accusamus, aliquid distinctio!
-              Inventore minus earum esse veniam voluptatibus voluptas, explicabo culpa aperiam cupiditate. Illum alias ipsum quo cumque expedita vero sint id perferendis at eaque maxime sequi omnis ex laborum, deserunt sit?</p>
+              <p>{{ state?.appData?.data?.user?.bio }}</p>
             </ion-col>
 
             <ion-col size="12">
               <h5>My Favorite Books</h5>
-              <p>1. Game Of Thrones</p>
+              <div *ngIf="state?.appData?.data?.user?.books as books">
+                <div *ngFor="let book of books">
+                  <p>{{ book.title}} By {{ book.author }}</p>
+                </div>
+              </div>
             </ion-col>
 
             <ion-col size="12">
               <h5>My Favorite Genres</h5>
-              <p>1. Romance</p>
+
+              <div *ngIf="state?.appData?.data?.user?.genres as genres">
+                <div *ngFor="let genre of genres">
+                  <p>{{ genre.name}} </p>
+                </div>
+              </div>
+
             </ion-col>
 
-            <ion-col size="12">
+            <!-- <ion-col size="12">
               <h5>Languages</h5>
               <p>1. Spanish
                 2. French
                 3. English
               </p>
-            </ion-col>
+            </ion-col> -->
           </ion-row>
         </ion-grid>
       </ion-card>

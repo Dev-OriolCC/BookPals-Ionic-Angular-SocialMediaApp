@@ -4,13 +4,17 @@ import com.bookpals.bookpals.domain.books.Book;
 import com.bookpals.bookpals.domain.genres.Genre;
 import com.bookpals.bookpals.domain.users.User;
 import com.bookpals.bookpals.domain.users.UserService;
+import com.bookpals.bookpals.web.Dto.HttpResponse;
 import lombok.*;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 @RestController
 @RequestMapping("/book-pals/api/v1/user")
@@ -26,8 +30,16 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<UserDTO> getUserById(@PathVariable Long id) {
-        return ResponseEntity.ok(toDto(userService.getUserById(id)));
+    public ResponseEntity<HttpResponse> getUserById(@PathVariable Long id) {
+        //return ResponseEntity.ok(toDto(userService.getUserById(id)));
+        return ResponseEntity.ok().body(
+                HttpResponse.builder()
+                        .timeStamp(LocalDateTime.now().toString())
+                        .data(Map.of("user", toDto(userService.getUserById(id))))
+                        .message("User retrieved")
+                        .status(HttpStatus.OK)
+                        .statusCode(HttpStatus.OK.value())
+                        .build());
 
     }
 
